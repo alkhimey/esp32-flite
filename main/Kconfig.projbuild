@@ -1,0 +1,37 @@
+menu "Application Configuration"
+
+config ESP_WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+	    SSID (network name) for the example to connect to.
+
+config ESP_WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+	    WiFi password (WPA or WPA2) for the example to use.
+
+config I2S_BCK_PIN
+    int "Bit Clock PIN Number"
+    range 0 34
+    default "26"
+    help
+	    Also called "Bit Block Line"
+
+config I2S_WS_PIN
+    int "Word Select PIN Number"
+    range 0 34
+    default "25"
+    help
+	    Also called LRCK - "Left Right Clock" or FS - "Frame Sync"
+
+
+config I2S_DATA_PIN
+    int "Data PIN Number"
+    range 0 34
+    default "22"
+    help
+	    Also called "Serial Data Line"
+
+endmenu
